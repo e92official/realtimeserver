@@ -14,15 +14,16 @@ This VSCode extension provides a live preview server that automatically updates 
 ### From VSIX
 
 1. Clone or download this repository.
-2. Open a terminal and navigate to the root directory of the repository.
-3. Package the extension:
+2. Install dependencies vie npm install in root
+3. Open a terminal and navigate to the root directory of the repository.
+4. Package the extension:
 
     ```sh
     vsce package
     ```
 
-4. Open VSCode and press `Ctrl+Shift+P` to open the command palette.
-5. Type `Extensions: Install from VSIX...` and select the generated `.vsix` file.
+5. Open VSCode and press `Ctrl+Shift+P` to open the command palette.
+6. Type `Extensions: Install from VSIX...` and select the generated `.vsix` file.
 
 ### From GitHub
 
