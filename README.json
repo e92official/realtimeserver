@@ -1,0 +1,62 @@
+# Realtime Server Extension for VSCode
+
+This VSCode extension provides a live preview server that automatically updates as you edit your HTML and JavaScript files. It starts both an HTTP server and a WebSocket server to enable real-time updates in the browser without needing to refresh the page.
+
+## Features
+
+- Start and stop the server from the VSCode status bar.
+- Automatically opens the default browser with the local server URL.
+- Real-time updates of HTML and JavaScript files in the browser.
+- Checks for occupied ports and frees them if necessary before starting the server.
+
+## Installation
+
+### From VSIX
+
+1. Clone or download this repository.
+2. Open a terminal and navigate to the root directory of the repository.
+3. Package the extension:
+
+    ```sh
+    vsce package
+    ```
+
+4. Open VSCode and press `Ctrl+Shift+P` to open the command palette.
+5. Type `Extensions: Install from VSIX...` and select the generated `.vsix` file.
+
+### From GitHub
+
+1. Clone or download this repository.
+2. Open the repository in VSCode.
+3. Press `F5` to start debugging the extension. This will open a new VSCode window with the extension loaded.
+
+## Usage
+
+### Start the Server
+
+1. Open an HTML or JavaScript file in VSCode.
+2. Press `Ctrl+Shift+P` to open the command palette.
+3. Type `Start Realtime Server` and select the command.
+
+The server will start, and the default browser will open with the local server URL.
+
+### Stop the Server
+
+1. Press `Ctrl+Shift+P` to open the command palette.
+2. Type `Stop Realtime Server` and select the command.
+
+### Toggle the Server
+
+You can also toggle the server on and off using the status bar item. When the server is running, the status bar item will be green. When the server is stopped, the status bar item will be orange.
+
+## Configuration
+
+You can customize the colors of the status bar item by adding the following to your `settings.json` file:
+
+```json
+{
+  "workbench.colorCustomizations": {
+    "statusBarItem.activeBackground": "#008000",  // Green for active
+    "statusBarItem.warningBackground": "#FFA500"  // Orange for warning
+  }
+}
