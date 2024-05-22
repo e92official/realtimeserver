@@ -1,0 +1,50 @@
+{
+  "name": "realtimeserver",
+  "displayName": "Realtime Server",
+  "description": "A VSCode extension to start a real-time server for HTML/JS updates",
+  "version": "0.0.1",
+  "publisher": "E92official",
+  "engines": {
+    "vscode": "^1.89.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "main": "./src/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "realtimeserver.startServer",
+        "title": "Start Realtime Server"
+      },
+      {
+        "command": "realtimeserver.stopServer",
+        "title": "Stop Realtime Server"
+      },
+      {
+        "command": "realtimeserver.toggleServer",
+        "title": "Toggle Realtime Server"
+      }
+    ]
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "pretest": "npm run lint",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/node": "18.x",
+    "@types/vscode": "^1.89.0",
+    "@vscode/test-electron": "^2.3.9",
+    "eslint": "^8.57.0"
+  },
+  "dependencies": {
+    "ws": "^8.17.0",
+    "lodash.debounce": "^4.0.8"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/e92official/realtimeserver"
+  },
+  "license": "MIT"
+}
